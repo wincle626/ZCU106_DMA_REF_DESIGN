@@ -201,6 +201,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.c_include_sg {0} \
    CONFIG.c_m_axi_mm2s_data_width {64} \
+   CONFIG.c_m_axi_s2mm_data_width {64} \
    CONFIG.c_m_axis_mm2s_tdata_width {64} \
    CONFIG.c_mm2s_burst_size {256} \
    CONFIG.c_s2mm_burst_size {256} \
@@ -219,6 +220,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.FIFO_DEPTH {16} \
    CONFIG.HAS_TLAST {1} \
+   CONFIG.TDATA_NUM_BYTES {8} \
  ] $axis_data_fifo_0
 
   # Create instance: ps8_0_axi_periph, and set properties
