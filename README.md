@@ -1,1 +1,7 @@
-# This is the repo of reference design for Xilinx AXI4 DMA for custom perpherial design
+# Reference design for Xilinx DMA FIFO
+
+## Hardware
+
+## Software
+
+## Experiments
