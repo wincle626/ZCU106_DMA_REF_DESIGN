@@ -25,7 +25,7 @@ All the designs target 100 MHz.
 
 ### 2. Power consumption
 
-1. Depth 16 FIFO
+Since there is no significant hardware cost difference, only depth 16 FIFO is illustrated here. 
 
 | VCCINT (volt) |       Power (mW)       | VCCBRAM (volt) |       Power (mW)       |
 | ------------- | ---------------------- | -------------- | ---------------------- |
@@ -39,19 +39,6 @@ All the designs target 100 MHz.
 |      0.52     |         207.11         |      0.59      |          12.48         |
 |      0.51     |          N/A           |      0.58      |           N/A          |
 
-2. Depth 1024 FIFO
-
-| VCCINT (volt) |       Power (mW)       | VCCBRAM (volt) |       Power (mW)       |
-| ------------- | ---------------------- | -------------- | ---------------------- |
-|      0.85     |         453.81         |      0.90      |          57.52         |
-|      0.80     |         403.47         |      0.85      |          48.36         |
-|      0.75     |         363.55         |      0.80      |          40.08         |
-|      0.70     |         326.38         |      0.75      |          32.65         |
-|      0.65     |         290.67         |      0.70      |          25.73         |
-|      0.60     |         257.62         |      0.65      |          19.54         |
-|      0.55     |         225.77         |      0.60      |          13.71         |
-|      0.52     |         207.11         |      0.59      |          12.48         |
-|      0.51     |          N/A           |      0.58      |           N/A          |
 
 ## Undervolt Error Detection
 
