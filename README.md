@@ -12,3 +12,31 @@ In this design, the Xilinx DMA is configured without Scatter Gather Engine and n
 The source and destination address are mapped as virtual memory to be accessed under Linux. By streaming specific data from the source address, the received data at the destination address is checked by comparing the pre-defined data array. 
 
 ## Experiments
+
+### 1. Resource utilization
+
+All the designs target 100 MHz. 
+
+| FFT  |      16      |      64      |      256      |      1024     |     4096      |     16384     |
+| ---- | ------------ | ------------ | ------------- | ------------- | ------------- | ------------- |
+| LUT  | 3724 (1.62%) | 3765 (1.62%) | 15453 (6.71%) | 15528 (6.74%) | 15764 (6.84%) | 15764 (6.84%) |
+| FF   | 5170 (1.12%) | 5178 (1.12%) | 19608 (4.26%) | 19775 (4.29%) | 19883 (4.31%) | 19883 (4.31%) |
+| BRAM |    5 (2.83%) |    5 (2.83%) |    16 (5.13%) |    20 (6.41%) |    48 (15.38%)|    48 (15.38%)|
+
+### 2. Power consumption
+
+1. Depth 16 FIFO
+
+| VCCINT (volt) |       Power (mW)       | VCCBRAM (volt) |       Power (mW)       |
+| ------------- | ---------------------- | -------------- | ---------------------- |
+|      0.85     |         453.81         |      0.90      |          57.52         |
+|      0.80     |         403.47         |      0.85      |          48.36         |
+|      0.75     |         363.55         |      0.80      |          40.08         |
+|      0.70     |         326.38         |      0.75      |          32.65         |
+|      0.65     |         290.67         |      0.70      |          25.73         |
+|      0.60     |         257.62         |      0.65      |          19.54         |
+|      0.55     |         225.77         |      0.60      |          13.71         |
+|      0.52     |         207.11         |      0.59      |          12.48         |
+|      0.51     |          N/A           |      0.58      |           N/A          |
+
+### 3. 
