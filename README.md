@@ -54,3 +54,5 @@ All the designs target 100 MHz.
 |      0.51     |          N/A           |      0.58      |           N/A          |
 
 ## Undervolt Error Detection
+
+So far, by tuning both VCCINT and VCCBRAM to the lowest voltage before crash, there is no error captured by comparing the received data at destination address to the pre-defined input data. 
